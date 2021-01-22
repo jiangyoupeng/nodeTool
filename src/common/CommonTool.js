@@ -23,7 +23,8 @@ exports.removeDir = exports.createAndWriteFileSync = void 0;
 var fs = __importStar(require("fs"));
 var path = __importStar(require("path"));
 function createAndWriteFileSync(filePath, content) {
-    var arr = filePath.split(path.sep);
+    var arr = path.normalize(filePath).split(path.sep);
+    console.log(" path.normalize(filePath) " + path.normalize(filePath));
     var dir = arr[0];
     for (var i = 1; i < arr.length; i++) {
         if (!fs.existsSync(dir)) {

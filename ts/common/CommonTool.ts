@@ -2,7 +2,8 @@ import * as fs from "fs"
 import * as path from "path"
 
 export function createAndWriteFileSync(filePath: string, content?: any) {
-    const arr = filePath.split(path.sep)
+    const arr = path.normalize(filePath).split(path.sep)
+    console.log(" path.normalize(filePath) " + path.normalize(filePath))
     let dir = arr[0]
     for (let i = 1; i < arr.length; i++) {
         if (!fs.existsSync(dir)) {
