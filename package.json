@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/jiangyoupeng/nodeTool#readme",
   "dependencies": {
+    "gl": "^4.9.0",
     "glsl-deparser": "^1.0.0",
     "glsl-parser": "^2.0.1",
     "glsl-tokenizer": "^2.1.5",
+    "glsl-transpiler": "^1.8.5",
     "rd": "^2.0.1",
     "readline": "^1.3.0",
     "recast": "^0.20.4"
